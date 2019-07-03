@@ -25,6 +25,7 @@
 		66E218E022CBE79900593B52 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218DE22CBE79900593B52 /* SecureStorageService.swift */; };
 		66E218E522CBE94800593B52 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218E422CBE94800593B52 /* Encryptor.swift */; };
 		66E218FF22CC02A100593B52 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */; };
+		66F89BA522CD2F4500AD0210 /* SecuritySuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		66E218DE22CBE79900593B52 /* SecureStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
 		66E218E422CBE94800593B52 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
 		66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySuite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				66E218E422CBE94800593B52 /* Encryptor.swift */,
 				66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */,
 				66661EBC22CC90040061AE21 /* SecurityUtils.swift */,
+				66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F89BA522CD2F4500AD0210 /* SecuritySuite.swift in Sources */,
 				66E218E522CBE94800593B52 /* Encryptor.swift in Sources */,
 				66E218FF22CC02A100593B52 /* Dictionary+Extension.swift in Sources */,
 				66E218E022CBE79900593B52 /* SecureStorageService.swift in Sources */,

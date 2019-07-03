@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - SecurityKey+SecurityConvertible
+
 public extension SecurityKey where T: SecurityConvertible  {
     convenience init(namespace: String,
                      key: String,
@@ -20,17 +22,22 @@ public extension SecurityKey where T: SecurityConvertible  {
                   accessControlFlags: accessControlFlags)
     }
     
-    convenience init<N: RawRepresentable>(
-        namespace: N,
-        key: String,
+    convenience init<S: SecuritySuite>(
+        _ suite: S,
+        key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
-        accessControlFlags: SecAccessControlCreateFlags = []) where N.RawValue == String {
-        self.init(namespace: namespace.rawValue,
-                  key: key,
+        accessControlFlags: SecAccessControlCreateFlags = []) {
+        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
+            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
+        }
+        self.init(namespace: suite.kind.rawValue,
+                  key: key.rawValue,
                   secureStorageOptions: secureStorageOptions,
                   accessControlFlags: accessControlFlags)
     }
 }
+
+// MARK: - SecurityKey+SecPrivateKey
 
 public extension SecurityKey where T == SecPrivateKey {
     convenience init(namespace: String,
@@ -50,17 +57,22 @@ public extension SecurityKey where T == SecPrivateKey {
                   accessControlFlags: accessControlFlags)
     }
     
-    convenience init<N: RawRepresentable>(
-        namespace: N,
-        key: String,
+    convenience init<S: SecuritySuite>(
+        _ suite: S,
+        key: S.Keys,
+        generateKeyIfNotFound: Bool = false,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
-        accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) where N.RawValue == String {
-        self.init(namespace: namespace.rawValue,
-                  key: key,
+        accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) {
+        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
+            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
+        }
+        self.init(namespace: suite.kind.rawValue,
+                  key: key.rawValue,
+                  generateKeyIfNotFound: generateKeyIfNotFound,
                   secureStorageOptions: secureStorageOptions,
                   accessControlFlags: accessControlFlags)
     }
-    
+
     func generateKey(context: SecurityContext? = nil) throws -> T {
         do {
             return try self.read(context: context)
@@ -76,6 +88,8 @@ public extension SecurityKey where T == SecPrivateKey {
     }
 }
 
+// MARK: - SecurityKey+SecPublicKey
+
 public extension SecurityKey where T == SecPublicKey {
     convenience init(namespace: String,
                      key: String,
@@ -89,13 +103,16 @@ public extension SecurityKey where T == SecPublicKey {
         
     }
     
-    convenience init<N: RawRepresentable>(
-        namespace: N,
-        key: String,
+    convenience init<S: SecuritySuite>(
+        _ suite: S,
+        key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
-        accessControlFlags: SecAccessControlCreateFlags = .passcodeOrBiometry) where N.RawValue == String {
-        self.init(namespace: namespace.rawValue,
-                  key: key,
+        accessControlFlags: SecAccessControlCreateFlags = .passcodeOrBiometry) {
+        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
+            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
+        }
+        self.init(namespace: suite.kind.rawValue,
+                  key: key.rawValue,
                   secureStorageOptions: secureStorageOptions,
                   accessControlFlags: accessControlFlags)
     }

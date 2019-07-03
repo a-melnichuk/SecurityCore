@@ -11,6 +11,8 @@ import LocalAuthentication
 
 public struct SecurityUtils {
     
+    static var uniqueSecuritySuiteKeys = Set<String>()
+    
     public static var biometryAvailable: Bool = {
         let authContext = LAContext()
         let biometryAvailable = authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
