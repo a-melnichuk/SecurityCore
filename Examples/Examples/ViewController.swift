@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         return SecurityContext(useOperationPrompt: "_Prompt", laContext: laContext)
     }
     
-    let privateKey = SecurityKey<SecPrivateKey>(namespace: "test", key: "private_key", accessControlFlags: [])
+    let privateKey = SecurityKey<SecPrivateKey>(namespace: "test", key: "private_key")
     let publicKey = SecurityKey<SecPublicKey>(namespace: "test", key: "public_key")
     let encryptedPassword = SecurityKey<Data>(namespace: "test", key: "password", accessControlFlags: [])
     let encryptedPasswordInfo = SecurityKey<Data>(namespace: "test", key: "password_signature", accessControlFlags: [])
@@ -102,6 +102,21 @@ class ViewController: UIViewController {
         clearKeychain()
     }
     
+    @IBAction func didTabGeneratePrivateKey(_ sender: Any) {
+        do {
+            let privateKey = try retreivePrivateKey()
+            let publicKey = try SecPublicKey(privateKey: privateKey)
+            
+            let alert = UIAlertController(title: "Keys created", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        } catch {
+            let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func didTabDelete(_ sender: Any) {
         self.view.endEditing(true)
         do {
@@ -124,6 +139,14 @@ class ViewController: UIViewController {
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func retreivePrivateKey() throws -> SecPrivateKey {
+        if let currPrivateKey = try self.privateKey.readIfPresent(context: context) {
+            return currPrivateKey
+        } else {
+            return try self.privateKey.generateKey(context: context)
+        }
     }
     
     private func retreiveKeyPair() throws -> (privateKey: SecPrivateKey, publicKey: SecPublicKey) {

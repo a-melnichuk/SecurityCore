@@ -49,20 +49,24 @@ public final class PrivateKeySecurityProvider: SecurityProvider {
                      context: SecurityContext?,
                      secureStorageOptions: SecureStorageAccessOptions,
                      accessControlFlags: SecAccessControlCreateFlags) throws -> T {
-        let query: [String: Any?] = [
-            kSecClass as String: kSecClassKey,
-            kSecMatchLimit as String: kSecMatchLimitOne,
-            kSecAttrApplicationTag as String: tag,
-            kSecReturnRef as String: true,
-            kSecUseOperationPrompt as String: context?.useOperationPrompt,
-            kSecUseAuthenticationContext as String: context?.laContext
-        ]
-        var item: CFTypeRef?
-        let status = SecItemCopyMatching(query.cfDictionary, &item)
-        guard status == errSecSuccess else {
-            throw SecureStorageError(status: status)
+        do {
+            let query: [String: Any?] = [
+                kSecClass as String: kSecClassKey,
+                kSecMatchLimit as String: kSecMatchLimitOne,
+                kSecAttrApplicationTag as String: tag,
+                kSecReturnRef as String: true,
+                kSecUseOperationPrompt as String: context?.useOperationPrompt,
+                kSecUseAuthenticationContext as String: context?.laContext
+            ]
+            var item: CFTypeRef?
+            let status = SecItemCopyMatching(query.cfDictionary, &item)
+            guard status == errSecSuccess else {
+                throw SecureStorageError(status: status)
+            }
+            return SecPrivateKey(item as! SecKey)
+        } catch SecureStorageError.notFound where generateKeyIfNotFound {
+            return SecPrivateKey(try generateKey())
         }
-        return SecPrivateKey(item as! SecKey)
     }
     
     public func generateKey() throws -> SecKey {
@@ -91,7 +95,7 @@ public final class PrivateKeySecurityProvider: SecurityProvider {
         guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
             let cfError = error!.takeRetainedValue()
             #if DEBUG
-            print("ket generation cfError: \(cfError)")
+            print("key generation cfError: \(cfError)")
             #endif
             throw SecureStorageError.securityError(cfError as Error)
         }
@@ -101,8 +105,4 @@ public final class PrivateKeySecurityProvider: SecurityProvider {
     public func delete(tag: Data) throws {
         try keyProvider.delete(tag: tag)
     }
-}
-
-public extension PrivateKeySecurityProvider {
-    
 }

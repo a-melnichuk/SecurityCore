@@ -13,7 +13,7 @@ CACHE_KEYS:
   SecurityCore:
     BUILD_SETTINGS_CHECKSUM:
       SecurityCore: 437593a8fd868ca9e75cf6e7e74cd114
-    CHECKSUM: f00713d8a4c339e91a5c343c64847cd902199036
+    CHECKSUM: 180dc5df6e8bf6475f2810d3c3aa894790cbc5b2
     FILES:
       - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/LICENSE"
       - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/SecurityCore.h"
@@ -33,5 +33,5 @@ CACHE_KEYS:
       - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityKey.swift"
       - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityUtils.swift"
     SPECS:
-      - SecurityCore (0.0.1)
+      - SecurityCore (0.0.3)
 OBJECT_VERSION: 51

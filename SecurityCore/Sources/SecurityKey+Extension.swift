@@ -37,7 +37,7 @@ public extension SecurityKey where T == SecPrivateKey {
                      key: String,
                      generateKeyIfNotFound: Bool = false,
                      secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
-                     accessControlFlags: SecAccessControlCreateFlags = .privateKeyUsage) {
+                     accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) {
         let tag = makeTag(namespace: namespace, key: key)
         let provider = PrivateKeySecurityProvider(tag: tag,
                                                   secureStorageOptions: secureStorageOptions,
@@ -54,17 +54,19 @@ public extension SecurityKey where T == SecPrivateKey {
         namespace: N,
         key: String,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
-        accessControlFlags: SecAccessControlCreateFlags = .passcodeOrBiometry) where N.RawValue == String {
+        accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) where N.RawValue == String {
         self.init(namespace: namespace.rawValue,
                   key: key,
                   secureStorageOptions: secureStorageOptions,
                   accessControlFlags: accessControlFlags)
     }
     
-    func generateKey(context: SecurityContext?) throws -> T {
+    func generateKey(context: SecurityContext? = nil) throws -> T {
         do {
             return try self.read(context: context)
         } catch SecureStorageError.notFound {
+            lock.lock()
+            defer { lock.unlock() }
             let provider = PrivateKeySecurityProvider(tag: tag,
                                                       secureStorageOptions: secureStorageOptions,
                                                       accessControlFlags: accessControlFlags,

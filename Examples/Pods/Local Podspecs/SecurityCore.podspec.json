@@ -1,6 +1,6 @@
 {
   "name": "SecurityCore",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "SecurityCore",
   "homepage": "https://paytomat.com/",
   "license": {
@@ -12,7 +12,7 @@
     "Alex Melnichuk": "a.melnichuk@yahoo.com"
   },
   "source": {
-    "path": "."
+    "git": "https://github.com/a-melnichuk/SecurityCore.git"
   },
   "source_files": [
     "SecurityCore/*.h",

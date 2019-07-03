@@ -9,16 +9,24 @@
 import Foundation
 import LocalAuthentication
 
-extension SecAccessControlCreateFlags {
-    public static var passcodeOrBiometry: SecAccessControlCreateFlags {
-        var flags = SecAccessControlCreateFlags.applicationPassword
-        let biometryAvailable = SecurityUtils.biometryAvailable
-        if #available(iOS 11.3, *) {
-           return .userPresence
-        } else if biometryAvailable {
-            flags.insert([.or, .touchIDAny])
+public extension SecAccessControlCreateFlags {
+    
+    static var privateKeyFlags: SecAccessControlCreateFlags {
+        if SecurityUtils.biometryAvailable {
+            return .privateKeyUsage
+        } else {
+            return []
         }
-        return flags
+    }
+    
+    static var passcodeOrBiometry: SecAccessControlCreateFlags {
+        if #available(iOS 11.3, *) {
+            return .userPresence
+        }
+        if SecurityUtils.biometryAvailable {
+            return [.devicePasscode, .or, .touchIDAny]
+        }
+        return .devicePasscode
     }
 }
 

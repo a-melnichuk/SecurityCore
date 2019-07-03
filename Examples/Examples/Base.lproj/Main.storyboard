@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-ar-G62">
-                                <rect key="frame" x="20" y="64" width="374" height="270.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="320.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beN-fO-riY">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="120.5"/>
@@ -74,8 +74,16 @@
                                             <action selector="didTabDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1c-Ke-KMD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McN-06-gJ4" userLabel="Delete all">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kd-t5-3g0">
                                         <rect key="frame" x="0.0" y="240.5" width="374" height="30"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Generate private key"/>
+                                        <connections>
+                                            <action selector="didTabGeneratePrivateKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgg-TB-pem"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McN-06-gJ4" userLabel="Delete all">
+                                        <rect key="frame" x="0.0" y="290.5" width="374" height="30"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Clear all keychain data"/>
                                         <connections>
