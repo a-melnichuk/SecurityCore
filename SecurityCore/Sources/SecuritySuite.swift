@@ -13,6 +13,4 @@ public protocol SecuritySuite where Suite.RawValue == String, Keys.RawValue == S
     associatedtype Keys: RawRepresentable
     
     var kind: Suite { get }
-    
-    func clear()
 }
