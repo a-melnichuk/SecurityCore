@@ -74,17 +74,7 @@ public extension SecurityKey where T == SecPrivateKey {
     }
 
     func generateKey(context: SecurityContext? = nil) throws -> T {
-        do {
-            return try self.read(context: context)
-        } catch SecureStorageError.notFound {
-            lock.lock()
-            defer { lock.unlock() }
-            let provider = PrivateKeySecurityProvider(tag: tag,
-                                                      secureStorageOptions: secureStorageOptions,
-                                                      accessControlFlags: accessControlFlags,
-                                                      generateKeyIfNotFound: false)
-            return SecPrivateKey(try provider.generateKey())
-        }
+        return try self.read(context: context)
     }
 }
 
