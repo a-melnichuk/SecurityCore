@@ -1,0 +1,37 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  Pods-Examples:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 167d82f4c920f77035f25c90024fc6fb
+      Release: 167d82f4c920f77035f25c90024fc6fb
+  Pods-ExamplesTests:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: ef109580148b98de1fb4f455c6ba5676
+      Release: ef109580148b98de1fb4f455c6ba5676
+  SecurityCore:
+    BUILD_SETTINGS_CHECKSUM:
+      SecurityCore: 437593a8fd868ca9e75cf6e7e74cd114
+    CHECKSUM: f00713d8a4c339e91a5c343c64847cd902199036
+    FILES:
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/LICENSE"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/SecurityCore.h"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Dictionary+Extension.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Encryptor.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecPrivateKey.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecPublicKey.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecureStorageService.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/DataSecurityProvider.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/KeySecurityProvider.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/PrivateKeySecurityProvider.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/PublicKeySecurityProvider.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/SecurityProvider.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityContext.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityConvertible.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityKey+Extension.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityKey.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityUtils.swift"
+    SPECS:
+      - SecurityCore (0.0.1)
+OBJECT_VERSION: 51

@@ -1,0 +1,32 @@
+{
+  "name": "SecurityCore",
+  "version": "0.0.1",
+  "summary": "SecurityCore",
+  "homepage": "https://paytomat.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Vitalii Havryliuk": "v.havryliuk@noisyminer.com",
+    "Alex Melnichuk": "a.melnichuk@yahoo.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": [
+    "SecurityCore/*.h",
+    "SecurityCore/Sources/*.swift",
+    "SecurityCore/Sources/Services/*.swift",
+    "SecurityCore/Sources/Security Providers/*.swift"
+  ],
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": "5.0",
+  "frameworks": [
+    "Foundation",
+    "LocalAuthentication"
+  ],
+  "swift_version": "5.0"
+}

@@ -1,0 +1,6 @@
+framework module SecurityCore {
+  umbrella header "SecurityCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

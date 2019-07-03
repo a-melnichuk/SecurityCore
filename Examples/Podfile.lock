@@ -1,0 +1,16 @@
+PODS:
+  - SecurityCore (0.0.1)
+
+DEPENDENCIES:
+  - SecurityCore (from `../`)
+
+EXTERNAL SOURCES:
+  SecurityCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SecurityCore: f00713d8a4c339e91a5c343c64847cd902199036
+
+PODFILE CHECKSUM: b968cd1b6bc6fb4de58ccf68ed1ce07eabfabd2a
+
+COCOAPODS: 1.7.3

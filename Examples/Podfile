@@ -1,0 +1,13 @@
+install! 'cocoapods', :generate_multiple_pod_projects => true, :incremental_installation => true
+
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Examples' do
+  pod 'SecurityCore', :path => '../'
+ 
+  target 'ExamplesTests' do
+    inherit! :search_paths
+  end
+
+end
