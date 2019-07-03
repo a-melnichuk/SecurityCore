@@ -44,7 +44,7 @@
 		665A236822CA247700A8FA8F /* SecurityCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurityCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665A236D22CA247700A8FA8F /* SecurityCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCoreTests.swift; sourceTree = "<group>"; };
 		665A236F22CA247700A8FA8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		665A23A622CA253B00A8FA8F /* SecurityCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecurityCore.podspec; sourceTree = "<group>"; };
+		665A23A622CA253B00A8FA8F /* SecurityCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecurityCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		665A23A722CA253B00A8FA8F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		665A23AB22CA253C00A8FA8F /* SecurityConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityConvertible.swift; sourceTree = "<group>"; };
 		665A23AC22CA253C00A8FA8F /* SecurityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityProvider.swift; sourceTree = "<group>"; };

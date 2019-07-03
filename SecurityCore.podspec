@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SecurityCore"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "SecurityCore"
   s.homepage     = "https://paytomat.com/"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     "Vitalii Havryliuk" => "v.havryliuk@noisyminer.com",
     "Alex Melnichuk" => "a.melnichuk@yahoo.com"
   }
-  s.source       = { :path => '.' }
+  s.source       = { :git => 'https://github.com/a-melnichuk/SecurityCore.git' }
   s.source_files = [
     'SecurityCore/*.h',
     'SecurityCore/Sources/*.swift',
