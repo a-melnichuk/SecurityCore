@@ -58,30 +58,30 @@ public final class SecurityKey<T> {
                   accessControlFlags: accessControlFlags)
     }
     
-    public func write(_ value: T, context: SecurityContext?) throws {
+    public func write(_ value: T, context: SecurityContext? = nil) throws {
         lock.lock()
         defer { lock.unlock() }
         try writer(value, context, secureStorageOptions, accessControlFlags)
     }
     
-    public func read(context: SecurityContext?) throws -> T {
+    public func read(context: SecurityContext? = nil) throws -> T {
         lock.lock()
         defer { lock.unlock() }
         return try reader(context, secureStorageOptions, accessControlFlags)
+    }
+    
+    public func readIfPresent(context: SecurityContext? = nil) throws -> T? {
+        do {
+            return try read(context: context)
+        } catch SecureStorageError.notFound {
+            return nil
+        }
     }
     
     public func delete() throws {
         lock.lock()
         defer { lock.unlock() }
         try deleter()
-    }
-    
-    public func readIfPresent(context: SecurityContext?) throws -> T? {
-        do {
-            return try read(context: context)
-        } catch SecureStorageError.notFound {
-            return nil
-        }
     }
 }
 
