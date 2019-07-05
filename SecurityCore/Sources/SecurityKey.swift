@@ -30,7 +30,7 @@ public final class SecurityKey<T> {
                                      key: String,
                                      secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
                                      accessControlFlags: SecAccessControlCreateFlags) where P.T == T {
-        let tag = makeTag(namespace: namespace, key: key)
+        let tag = SecurityUtils.makeTag(namespace: namespace, key: key)
         self.reader = {
             try provider.read(tag: tag, context: $0, secureStorageOptions: $1, accessControlFlags: $2)
         }
@@ -85,10 +85,4 @@ public final class SecurityKey<T> {
     }
 }
 
-func makeTag(namespace: String, key: String) -> Data {
-    var bundle = ""
-    if let bundleId = Bundle.main.bundleIdentifier {
-        bundle += "\(bundleId)."
-    }
-    return Data("\(bundle)\(namespace).\(key)".utf8)
-}
+

@@ -8,9 +8,31 @@
 
 import Foundation
 
-public protocol SecuritySuite where Suite.RawValue == String, Keys.RawValue == String {
-    associatedtype Suite: RawRepresentable
+public protocol SecuritySuiteParams where SuiteKind.RawValue == String,
+                                          Keys.RawValue == String,
+                                          Keys: CaseIterable {
+    associatedtype SuiteKind: RawRepresentable
     associatedtype Keys: RawRepresentable
     
-    var kind: Suite { get }
+    var kind: SuiteKind { get }
+    init()
+}
+
+
+public protocol SecuritySuite {
+    associatedtype SuiteParams: SecuritySuiteParams
+    func clear()
+}
+
+public extension SecuritySuite {
+    func clear() {
+        let dataProvider = DataSecurityProvider<Data>()
+        let keyProvider = KeySecurityProvider()
+        SuiteParams.Keys.allCases.forEach {
+            let suite = SuiteParams()
+            let tag = SecurityUtils.makeTag(namespace: suite.kind.rawValue, key: $0.rawValue)
+            try? dataProvider.delete(tag: tag)
+            try? keyProvider.delete(tag: tag)
+        }
+    }
 }

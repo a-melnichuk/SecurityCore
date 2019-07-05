@@ -22,7 +22,7 @@ public extension SecurityKey where T: SecurityConvertible  {
                   accessControlFlags: accessControlFlags)
     }
     
-    convenience init<S: SecuritySuite>(
+    convenience init<S: SecuritySuiteParams>(
         _ suite: S,
         key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
@@ -45,7 +45,7 @@ public extension SecurityKey where T == SecPrivateKey {
                      generateKeyIfNotFound: Bool = false,
                      secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
                      accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) {
-        let tag = makeTag(namespace: namespace, key: key)
+        let tag = SecurityUtils.makeTag(namespace: namespace, key: key)
         let provider = PrivateKeySecurityProvider(tag: tag,
                                                   secureStorageOptions: secureStorageOptions,
                                                   accessControlFlags: accessControlFlags,
@@ -57,7 +57,7 @@ public extension SecurityKey where T == SecPrivateKey {
                   accessControlFlags: accessControlFlags)
     }
     
-    convenience init<S: SecuritySuite>(
+    convenience init<S: SecuritySuiteParams>(
         _ suite: S,
         key: S.Keys,
         generateKeyIfNotFound: Bool = false,
@@ -93,7 +93,7 @@ public extension SecurityKey where T == SecPublicKey {
         
     }
     
-    convenience init<S: SecuritySuite>(
+    convenience init<S: SecuritySuiteParams>(
         _ suite: S,
         key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,

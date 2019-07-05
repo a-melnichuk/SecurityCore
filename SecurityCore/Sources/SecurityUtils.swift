@@ -35,5 +35,13 @@ public struct SecurityUtils {
         return LAContext().canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
     }()
     
+    public static func makeTag(namespace: String, key: String) -> Data {
+        var bundle = ""
+        if let bundleId = Bundle.main.bundleIdentifier {
+            bundle += "\(bundleId)."
+        }
+        return Data("\(bundle)\(namespace).\(key)".utf8)
+    }
+    
     private init() {}
 }
