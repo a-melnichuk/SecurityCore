@@ -28,8 +28,8 @@ public extension SecuritySuite {
     func clear() {
         let dataProvider = DataSecurityProvider<Data>()
         let keyProvider = KeySecurityProvider()
+        let suite = SuiteParams()
         SuiteParams.Keys.allCases.forEach {
-            let suite = SuiteParams()
             let tag = SecurityUtils.makeTag(namespace: suite.kind.rawValue, key: $0.rawValue)
             try? dataProvider.delete(tag: tag)
             try? keyProvider.delete(tag: tag)
