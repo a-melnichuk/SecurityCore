@@ -29,7 +29,7 @@ public extension SecuritySuite {
         let dataProvider = DataSecurityProvider<Data>()
         let keyProvider = KeySecurityProvider()
         let suite = Params()
-        SuiteParams.Keys.allCases.forEach {
+        Params.Keys.allCases.forEach {
             let tag = SecurityUtils.makeTag(namespace: suite.kind.rawValue, key: $0.rawValue)
             try? dataProvider.delete(tag: tag)
             try? keyProvider.delete(tag: tag)
