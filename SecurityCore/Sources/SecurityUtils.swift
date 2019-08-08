@@ -14,6 +14,10 @@ public struct SecurityUtils {
     static var uniqueSecuritySuiteKeys = Set<String>()
     
     public static var biometryAvailable: Bool = {
+        #if arch(i386) || arch(x86_64)
+        return false
+        #endif        
+        
         let authContext = LAContext()
         let biometryAvailable = authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         if #available(iOS 11.0, *) {
