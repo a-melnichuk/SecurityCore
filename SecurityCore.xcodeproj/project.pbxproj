@@ -25,6 +25,7 @@
 		66E218E022CBE79900593B52 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218DE22CBE79900593B52 /* SecureStorageService.swift */; };
 		66E218E522CBE94800593B52 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218E422CBE94800593B52 /* Encryptor.swift */; };
 		66E218FF22CC02A100593B52 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */; };
+		66F60F172350630B00285371 /* SecuritySuiteKeysService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F60F162350630B00285371 /* SecuritySuiteKeysService.swift */; };
 		66F89BA522CD2F4500AD0210 /* SecuritySuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		66E218DE22CBE79900593B52 /* SecureStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
 		66E218E422CBE94800593B52 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
 		66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		66F60F162350630B00285371 /* SecuritySuiteKeysService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySuiteKeysService.swift; sourceTree = "<group>"; };
 		66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySuite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				66E218FE22CC02A100593B52 /* Dictionary+Extension.swift */,
 				66661EBC22CC90040061AE21 /* SecurityUtils.swift */,
 				66F89BA422CD2F4500AD0210 /* SecuritySuite.swift */,
+				66F60F162350630B00285371 /* SecuritySuiteKeysService.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				665A23BD22CA382700A8FA8F /* PrivateKeySecurityProvider.swift in Sources */,
 				665A23BF22CA3ABC00A8FA8F /* DataSecurityProvider.swift in Sources */,
 				665A23BB22CA381100A8FA8F /* PublicKeySecurityProvider.swift in Sources */,
+				66F60F172350630B00285371 /* SecuritySuiteKeysService.swift in Sources */,
 				665A468F22CA93640074C587 /* SecPublicKey.swift in Sources */,
 				665A23C722CA54E900A8FA8F /* SecurityKey+Extension.swift in Sources */,
 				665A469122CA936C0074C587 /* SecPrivateKey.swift in Sources */,

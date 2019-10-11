@@ -27,9 +27,6 @@ public extension SecurityKey where T: SecurityConvertible  {
         key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
         accessControlFlags: SecAccessControlCreateFlags = []) {
-        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
-            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
-        }
         self.init(namespace: suite.kind.rawValue,
                   key: key.rawValue,
                   secureStorageOptions: secureStorageOptions,
@@ -63,9 +60,6 @@ public extension SecurityKey where T == SecPrivateKey {
         generateKeyIfNotFound: Bool = false,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
         accessControlFlags: SecAccessControlCreateFlags = .privateKeyFlags) {
-        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
-            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
-        }
         self.init(namespace: suite.kind.rawValue,
                   key: key.rawValue,
                   generateKeyIfNotFound: generateKeyIfNotFound,
@@ -98,9 +92,6 @@ public extension SecurityKey where T == SecPublicKey {
         key: S.Keys,
         secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
         accessControlFlags: SecAccessControlCreateFlags = .passcodeOrBiometry) {
-        guard SecurityUtils.uniqueSecuritySuiteKeys.insert(suite.kind.rawValue + key.rawValue).inserted else {
-            fatalError("Duplicate item inserted in suite \(S.self) \(suite.kind) for key \(key)")
-        }
         self.init(namespace: suite.kind.rawValue,
                   key: key.rawValue,
                   secureStorageOptions: secureStorageOptions,

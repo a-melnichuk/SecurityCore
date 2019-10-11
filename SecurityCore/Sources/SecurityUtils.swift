@@ -11,8 +11,6 @@ import LocalAuthentication
 
 public struct SecurityUtils {
     
-    static var uniqueSecuritySuiteKeys = Set<String>()
-    
     public static var biometryAvailable: Bool = {
         #if arch(i386) || arch(x86_64)
         return false

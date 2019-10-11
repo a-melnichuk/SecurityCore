@@ -19,18 +19,13 @@ public final class SecurityKey<T> {
     private let writer: ((T, SecurityContext?, SecureStorageAccessOptions, SecAccessControlCreateFlags) throws -> Void)
     private let deleter: (() throws -> Void)
     
-    deinit {
-        #if DEBUG
-        print("🗑 deinit \(self)<\(T.self)>, tag: \(String(data: tag, encoding: .utf8)!)")
-        #endif
-    }
-    
     public init<P: SecurityProvider>(provider: P,
                                      namespace: String,
                                      key: String,
                                      secureStorageOptions: SecureStorageAccessOptions = .defaultOptions,
                                      accessControlFlags: SecAccessControlCreateFlags) where P.T == T {
         let tag = SecurityUtils.makeTag(namespace: namespace, key: key)
+        
         self.reader = {
             try provider.read(tag: tag, context: $0, secureStorageOptions: $1, accessControlFlags: $2)
         }
@@ -43,6 +38,8 @@ public final class SecurityKey<T> {
         self.tag = tag
         self.secureStorageOptions = secureStorageOptions
         self.accessControlFlags = accessControlFlags
+        
+        SecuritySuiteKeysService.addKey(tagged: tag)
     }
     
     public convenience init<N: RawRepresentable, P: SecurityProvider>(
@@ -56,6 +53,13 @@ public final class SecurityKey<T> {
                   key: key,
                   secureStorageOptions: secureStorageOptions,
                   accessControlFlags: accessControlFlags)
+    }
+    
+    deinit {
+        #if DEBUG
+        print("🗑 deinit \(self)<\(T.self)>, tag: \(String(data: tag, encoding: .utf8)!)")
+        #endif
+        SecuritySuiteKeysService.removeKey(tagged: tag)
     }
     
     public func write(_ value: T, context: SecurityContext? = nil) throws {
