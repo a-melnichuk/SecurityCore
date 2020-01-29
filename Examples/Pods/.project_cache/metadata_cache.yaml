@@ -1,12 +1,12 @@
 Pods-Examples:
   LABEL: Pods-Examples
-  PROJECT_PATH: "/Users/alexmelnichuk/XcodeProjects/SecurityCore/Examples/Pods/Pods.xcodeproj"
+  PROJECT_PATH: Pods.xcodeproj
   UUID: 798D7038185779650724117C84AA91DB
 Pods-ExamplesTests:
   LABEL: Pods-ExamplesTests
-  PROJECT_PATH: "/Users/alexmelnichuk/XcodeProjects/SecurityCore/Examples/Pods/Pods.xcodeproj"
+  PROJECT_PATH: Pods.xcodeproj
   UUID: B03191DE53AA50D839E1595720CE67A1
 SecurityCore:
   LABEL: SecurityCore
-  PROJECT_PATH: "/Users/alexmelnichuk/XcodeProjects/SecurityCore/Examples/Pods/SecurityCore.xcodeproj"
+  PROJECT_PATH: SecurityCore.xcodeproj
   UUID: 1B074D64A374C61B465588A3CE4CD2F3

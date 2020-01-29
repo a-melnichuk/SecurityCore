@@ -30,6 +30,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        testKey()
+    }
+    
+    private func testKey() {
+        let privateKey = SecurityKey<SecPrivateKey>(namespace: "unit_test", key: "private_key", generateKeyIfNotFound: false)
+        do {
+            try privateKey.delete()
+        } catch {
+            print("__0_ERROR", error)
+            return
+        }
+        do {
+            try privateKey.generateKey()
+        } catch {
+            print("__1_ERROR", error)
+            return
+        }
+        do {
+            try privateKey.read()
+        } catch {
+            print("__2_ERROR", error)
+            return
+        }
+        print("__3_SUCCESS")
     }
     
     // MARK: Actions

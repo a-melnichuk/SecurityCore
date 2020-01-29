@@ -7,28 +7,15 @@
 //
 
 import XCTest
+import SecurityCore
 @testable import Examples
 
 class ExamplesTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let privateKey = SecurityKey<SecPrivateKey>(namespace: "unit_test", key: "private_key", generateKeyIfNotFound: false)
+        XCTAssertNoThrow(try privateKey.delete())
+        XCTAssertNoThrow(try privateKey.generateKey())
+        XCTAssertNoThrow(try privateKey.read())
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

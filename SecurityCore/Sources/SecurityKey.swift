@@ -18,6 +18,7 @@ public final class SecurityKey<T> {
     private let reader: ((SecurityContext?, SecureStorageAccessOptions, SecAccessControlCreateFlags) throws -> T)
     private let writer: ((T, SecurityContext?, SecureStorageAccessOptions, SecAccessControlCreateFlags) throws -> Void)
     private let deleter: (() throws -> Void)
+    private let keyGenerator: (() throws -> T)
     
     public init<P: SecurityProvider>(provider: P,
                                      namespace: String,
@@ -34,6 +35,9 @@ public final class SecurityKey<T> {
         }
         self.deleter = {
             try provider.delete(tag: tag)
+        }
+        self.keyGenerator = {
+            try provider.generateKey()
         }
         self.tag = tag
         self.secureStorageOptions = secureStorageOptions
@@ -80,6 +84,12 @@ public final class SecurityKey<T> {
         } catch SecureStorageError.notFound {
             return nil
         }
+    }
+    
+    public func generateKey() throws -> T {
+        lock.lock()
+        defer { lock.unlock() }
+        return try keyGenerator()
     }
     
     public func delete() throws {

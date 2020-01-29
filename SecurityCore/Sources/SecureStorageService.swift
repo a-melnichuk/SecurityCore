@@ -33,7 +33,7 @@ public extension SecAccessControlCreateFlags {
 public enum SecureStorageError: Error {
     case securityError(Error)
     case invalidStatus(OSStatus)
-    case unableToCreatePublicKey
+    case unableToCreateKey
     case invalidAttributes(String)
     case notFound
     case encoding

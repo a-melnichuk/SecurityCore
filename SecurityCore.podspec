@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SecurityCore"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "SecurityCore"
   s.homepage     = "https://paytomat.com/"
   s.license      = { :type => "MIT", :file => "LICENSE" }

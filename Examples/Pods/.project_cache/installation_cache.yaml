@@ -4,34 +4,37 @@ BUILD_CONFIGURATIONS:
 CACHE_KEYS:
   Pods-Examples:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: 167d82f4c920f77035f25c90024fc6fb
-      Release: 167d82f4c920f77035f25c90024fc6fb
+      Debug: dc68b76930ec91a93c90a0898836e055
+      Release: dc68b76930ec91a93c90a0898836e055
   Pods-ExamplesTests:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: ef109580148b98de1fb4f455c6ba5676
-      Release: ef109580148b98de1fb4f455c6ba5676
+      Debug: 38da1c07548d4b374095f55602bda580
+      Release: 38da1c07548d4b374095f55602bda580
   SecurityCore:
     BUILD_SETTINGS_CHECKSUM:
-      SecurityCore: 437593a8fd868ca9e75cf6e7e74cd114
-    CHECKSUM: 180dc5df6e8bf6475f2810d3c3aa894790cbc5b2
+      SecurityCore: 7c97700993b699c71c7024909fc73041
+    CHECKSUM: d408c6de5d7bc184dce282cd1299c68a2528c411
     FILES:
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/LICENSE"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/SecurityCore.h"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Dictionary+Extension.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Encryptor.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecPrivateKey.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecPublicKey.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecureStorageService.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/DataSecurityProvider.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/KeySecurityProvider.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/PrivateKeySecurityProvider.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/PublicKeySecurityProvider.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/Security Providers/SecurityProvider.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityContext.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityConvertible.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityKey+Extension.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityKey.swift"
-      - "/Users/alexmelnichuk/XcodeProjects/SecurityCore/SecurityCore/Sources/SecurityUtils.swift"
+      - "../../LICENSE"
+      - "../../SecurityCore/SecurityCore.h"
+      - "../../SecurityCore/Sources/Dictionary+Extension.swift"
+      - "../../SecurityCore/Sources/Encryptor.swift"
+      - "../../SecurityCore/Sources/SecPrivateKey.swift"
+      - "../../SecurityCore/Sources/SecPublicKey.swift"
+      - "../../SecurityCore/Sources/SecureStorageService.swift"
+      - "../../SecurityCore/Sources/Security Providers/DataSecurityProvider.swift"
+      - "../../SecurityCore/Sources/Security Providers/KeySecurityProvider.swift"
+      - "../../SecurityCore/Sources/Security Providers/PrivateKeySecurityProvider.swift"
+      - "../../SecurityCore/Sources/Security Providers/PublicKeySecurityProvider.swift"
+      - "../../SecurityCore/Sources/Security Providers/SecurityProvider.swift"
+      - "../../SecurityCore/Sources/SecurityContext.swift"
+      - "../../SecurityCore/Sources/SecurityConvertible.swift"
+      - "../../SecurityCore/Sources/SecurityKey+Extension.swift"
+      - "../../SecurityCore/Sources/SecurityKey.swift"
+      - "../../SecurityCore/Sources/SecuritySuite.swift"
+      - "../../SecurityCore/Sources/SecuritySuiteKeysService.swift"
+      - "../../SecurityCore/Sources/SecurityUtils.swift"
+    PROJECT_NAME: SecurityCore
     SPECS:
-      - SecurityCore (0.0.3)
+      - SecurityCore (0.0.8)
 OBJECT_VERSION: 51

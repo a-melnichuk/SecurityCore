@@ -1,5 +1,5 @@
 PODS:
-  - SecurityCore (0.0.3)
+  - SecurityCore (0.0.8)
 
 DEPENDENCIES:
   - SecurityCore (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SecurityCore: 180dc5df6e8bf6475f2810d3c3aa894790cbc5b2
+  SecurityCore: d408c6de5d7bc184dce282cd1299c68a2528c411
 
 PODFILE CHECKSUM: b968cd1b6bc6fb4de58ccf68ed1ce07eabfabd2a
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4

@@ -68,6 +68,10 @@ public final class DataSecurityProvider<T: SecurityConvertible>: SecurityProvide
         return try T(secureData: data)
     }
     
+    public func generateKey() throws -> T {
+        throw SecureStorageError.unableToCreateKey
+    }
+    
     public func delete(tag: Data) throws {
         let attributes: [String: Any?] = [
             kSecClass as String: kSecClassGenericPassword,

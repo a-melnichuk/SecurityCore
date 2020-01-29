@@ -10,6 +10,7 @@ import Foundation
 import LocalAuthentication
 
 public final class PublicKeySecurityProvider: SecurityProvider {
+
     public typealias T = SecPublicKey
     
     private let keyProvider = KeySecurityProvider()
@@ -37,6 +38,10 @@ public final class PublicKeySecurityProvider: SecurityProvider {
                                        secureStorageOptions: secureStorageOptions,
                                        accessControlFlags: accessControlFlags)
         return SecPublicKey(key)
+    }
+    
+    public func generateKey() throws -> SecPublicKey {
+        throw SecureStorageError.unableToCreateKey
     }
     
     public func delete(tag: Data) throws {

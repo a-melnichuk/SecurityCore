@@ -20,5 +20,7 @@ public protocol SecurityProvider {
               context: SecurityContext?,
               secureStorageOptions: SecureStorageAccessOptions,
               accessControlFlags: SecAccessControlCreateFlags) throws -> T
-    func delete(tag: Data) throws 
+    func delete(tag: Data) throws
+    
+    func generateKey() throws -> T
 }

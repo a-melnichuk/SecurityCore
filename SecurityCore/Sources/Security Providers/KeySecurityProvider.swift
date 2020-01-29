@@ -9,6 +9,7 @@
 import Foundation
 
 public final class KeySecurityProvider: SecurityProvider {
+    
     public typealias T = SecKey
     
     public init() {
@@ -66,6 +67,10 @@ public final class KeySecurityProvider: SecurityProvider {
             throw SecureStorageError(status: status)
         }
         return item as! SecKey
+    }
+    
+    public func generateKey() throws -> SecKey {
+        throw SecureStorageError.unableToCreateKey
     }
     
     public func delete(tag: Data) throws {

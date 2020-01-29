@@ -7,65 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C57C697C9DED4C9A6AC3A397DC3A146 /* SecurityCore.h in Headers */ = {isa = PBXBuildFile; fileRef = AF600A66D225F4FE09C8FBBF2159C938 /* SecurityCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EFE0FBF036EE9BF1AD9CD23E9E1176D /* SecurityCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E81E9812F2844E710B7F3ED63AD893 /* SecurityCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10C6EEA9ED5C4F6C43071D8393AD39EF /* SecPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF16B797187A7FFA6A02E13AED73AD /* SecPublicKey.swift */; };
-		22E8B087541619AB5833C98C5AE66E74 /* SecurityConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7833619685E36FA73465CED049895D /* SecurityConvertible.swift */; };
-		2C194A48C5025C08AFCFA938E0BB933A /* SecurityKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A4A69A8E9A8B233F9E2A66F1B36B5C /* SecurityKey+Extension.swift */; };
-		2F01D9018813AA6AFB550F7EBD9B919A /* SecurityKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D0D6620D2F24BB73AD7409BA9534A0 /* SecurityKey.swift */; };
-		361F1F49BB2507672AF8AFDB9B2FABF4 /* SecurityCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825F6B3ECD30AE847DC8EC3F57ECFCE /* SecurityCore-dummy.m */; };
-		386E1C2F20D6F6ADCB9619E243120E79 /* PublicKeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1535776375344BD5097FDFAD321B140 /* PublicKeySecurityProvider.swift */; };
-		3B3623F1D2A91934088B2F8D2F95B71F /* SecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06887B8171A7B50C10CEC2339FA261 /* SecurityProvider.swift */; };
-		3E90779D1A82D94C035653D5FD12572B /* SecurityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F16742D064B30C1C92F628D27437DF /* SecurityUtils.swift */; };
-		43CB56C1345B8CEC7F4DB5FA1B02BAB4 /* SecurityContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6266D4C1918E0A62549F2A5ED839C7 /* SecurityContext.swift */; };
-		4AADF49443819FD56EE15D3D8167E8E8 /* DataSecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15CE523EE77B637315AE3C642AACE /* DataSecurityProvider.swift */; };
-		72B1045467D2A9050B9D9CE41BC61B02 /* PrivateKeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C8AC6C10C4AA1EE7DC1A49C76D893 /* PrivateKeySecurityProvider.swift */; };
-		796C31EA7096B5CD90E4CC630B010CB6 /* KeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A11E1452BABC23ABA6975D5DC20AF /* KeySecurityProvider.swift */; };
-		7FCA05969D2C20779E0BBBEB681DCEC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B383F2791599D9FBC834B83BDBA4CB10 /* Encryptor.swift */; };
-		99968DC5C08D75C1CB95040515EDAF44 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D690DF02EB4B39571A2031F241354 /* LocalAuthentication.framework */; };
-		BE68DD4F26BBD0B7D670F2C136C0AC95 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DF7230FE0442E4CD8A3160D6AEC45 /* Dictionary+Extension.swift */; };
-		C3A32047AA59B286F79A09EF94EC4BD7 /* SecPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41F86D34B22558E4D3F0F6A086EB73C /* SecPrivateKey.swift */; };
-		DF487EF56C90A0999E29E5A8B57B3641 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4146145F3792222A8A3BF18D03D105 /* SecureStorageService.swift */; };
-		F209801875CEAC3151DB479728F708EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32488DB4E5027548D55184604113DF /* Foundation.framework */; };
+		009208B621D3EE42CA50FE24B1B10A9C /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1E3A0124CB441D3222D9F11EC5173 /* Encryptor.swift */; };
+		03F920443B08020BC8BD79E27512C652 /* PrivateKeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083D97D3D860D1CAD20BF4514FF3A1F /* PrivateKeySecurityProvider.swift */; };
+		1B276F8FAA5268AFD3A2F48C4568B108 /* DataSecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A432E26E4199968ACFD2A4B00603DF /* DataSecurityProvider.swift */; };
+		1F4BA428C5BC92B3642FF0A1956E36ED /* SecPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD884C4A2C076E7BB1F396AB1E8A9A /* SecPublicKey.swift */; };
+		3B1688481A16FF23CF8965B9B9ACD038 /* SecuritySuiteKeysService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49383C648BBD590A65FC316AD16B0F4 /* SecuritySuiteKeysService.swift */; };
+		416B7C41082D671BAE10D666008153D8 /* PublicKeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160B8272E285F23D7798411CA295C6 /* PublicKeySecurityProvider.swift */; };
+		44EFE339BF02164F4CC42A962AB275BD /* SecurityConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5A1FB7744AE4A0CFE36AED75C1515A /* SecurityConvertible.swift */; };
+		59DC96E5DDDD4BD2C05A1AD3B40D22AE /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3A4F462632B563C866543289B894D /* SecureStorageService.swift */; };
+		6063C41EDD557750E0C971A04420769F /* SecPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4ADAFF6429BB955BC20AFC122B745E /* SecPrivateKey.swift */; };
+		7017FDF8E556D865170596F61C21C89F /* SecurityCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 66302F8195CD927F75546D6B88D3ECEA /* SecurityCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77AC488EDF1A117E8D25653CC3072083 /* SecurityKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C686343E8723B29DD1EC127185903506 /* SecurityKey+Extension.swift */; };
+		7F1B89195F31321FBBF21E123AD415CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32488DB4E5027548D55184604113DF /* Foundation.framework */; };
+		89E5D0B73D10739F771904F081136CD0 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350D690DF02EB4B39571A2031F241354 /* LocalAuthentication.framework */; };
+		9FE518AF8291AE53340560486E75EF5B /* KeySecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2543F3B61074C2DA6E8AA8823A0E13 /* KeySecurityProvider.swift */; };
+		ADD9A2A16B0D4430EAB5DD6DA83FD6BC /* SecurityCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D78B2DF0619AB580E888EF26ABAB05C /* SecurityCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4BE0AAC9678F0EA023889478EEFF76F /* SecurityCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B431D37C88B1C14E5900BC0BD6FCED /* SecurityCore-dummy.m */; };
+		B694FFD1E7B16795273643B19674D357 /* SecurityContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E90ABC11D81CCE4200E7BB5F47A68D /* SecurityContext.swift */; };
+		BECEBEA6086C9F0B81A1834914275E6F /* SecurityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FE1C255BCC11EBCF1FFD0974E689B /* SecurityProvider.swift */; };
+		C1D7A815EDA23565CBB8F0868849AA3B /* SecurityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E774E8A626828C042035F468D91DD /* SecurityUtils.swift */; };
+		C8B4B7574F874F3170B72142DE9A6AC7 /* SecurityKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA506933B7B9E795873205EC7E603A19 /* SecurityKey.swift */; };
+		DFEE692421C8BCDF2188A3EAF21C786D /* SecuritySuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A10BAFF9E055031235ABA1F449AA /* SecuritySuite.swift */; };
+		EBC6E89F3B1246D3B5A50995CD8A73ED /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7B18266731A1BA257BC7212E9BEDE /* Dictionary+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E6266D4C1918E0A62549F2A5ED839C7 /* SecurityContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityContext.swift; sourceTree = "<group>"; };
-		19F731B20DB970356960A2F72C8873CF /* SecurityCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SecurityCore.xcconfig; sourceTree = "<group>"; };
-		1D67A33F05E941A4CC040A6E87B67389 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		1D7833619685E36FA73465CED049895D /* SecurityConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityConvertible.swift; sourceTree = "<group>"; };
+		07D7B18266731A1BA257BC7212E9BEDE /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		19EDBBC3A2177FD1A4547DA9537E2FA3 /* SecurityCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SecurityCore-prefix.pch"; sourceTree = "<group>"; };
+		20160B8272E285F23D7798411CA295C6 /* PublicKeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PublicKeySecurityProvider.swift; sourceTree = "<group>"; };
+		2F5A1FB7744AE4A0CFE36AED75C1515A /* SecurityConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityConvertible.swift; sourceTree = "<group>"; };
 		350D690DF02EB4B39571A2031F241354 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
-		3825F6B3ECD30AE847DC8EC3F57ECFCE /* SecurityCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SecurityCore-dummy.m"; sourceTree = "<group>"; };
-		38DF16B797187A7FFA6A02E13AED73AD /* SecPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecPublicKey.swift; sourceTree = "<group>"; };
-		40F16742D064B30C1C92F628D27437DF /* SecurityUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityUtils.swift; sourceTree = "<group>"; };
-		442ACD45D95FD08ADD184F659D4415B1 /* SecurityCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SecurityCore-prefix.pch"; sourceTree = "<group>"; };
-		5D06887B8171A7B50C10CEC2339FA261 /* SecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityProvider.swift; sourceTree = "<group>"; };
-		6B28F57C76D1ABE36C2C2A8FD00433C0 /* SecurityCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SecurityCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7A9DF7230FE0442E4CD8A3160D6AEC45 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		86E81E9812F2844E710B7F3ED63AD893 /* SecurityCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SecurityCore-umbrella.h"; sourceTree = "<group>"; };
+		3628A10BAFF9E055031235ABA1F449AA /* SecuritySuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecuritySuite.swift; sourceTree = "<group>"; };
+		4C5FE1C255BCC11EBCF1FFD0974E689B /* SecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityProvider.swift; sourceTree = "<group>"; };
+		5399D0B8501E0DDF14403B297AB01BB5 /* SecurityCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SecurityCore-Info.plist"; sourceTree = "<group>"; };
+		6083D97D3D860D1CAD20BF4514FF3A1F /* PrivateKeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivateKeySecurityProvider.swift; sourceTree = "<group>"; };
+		66302F8195CD927F75546D6B88D3ECEA /* SecurityCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SecurityCore.h; path = SecurityCore/SecurityCore.h; sourceTree = "<group>"; };
+		6EDE8EC8E72FD5E5F11B97A615DF7FB4 /* SecurityCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SecurityCore.xcconfig; sourceTree = "<group>"; };
+		71A432E26E4199968ACFD2A4B00603DF /* DataSecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataSecurityProvider.swift; sourceTree = "<group>"; };
+		7C2543F3B61074C2DA6E8AA8823A0E13 /* KeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeySecurityProvider.swift; sourceTree = "<group>"; };
+		7D78B2DF0619AB580E888EF26ABAB05C /* SecurityCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SecurityCore-umbrella.h"; sourceTree = "<group>"; };
 		8E42C18B7D39C43F851D70DC4F8B7E40 /* SecurityCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SecurityCore.framework; path = SecurityCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1535776375344BD5097FDFAD321B140 /* PublicKeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PublicKeySecurityProvider.swift; sourceTree = "<group>"; };
-		A60C8AC6C10C4AA1EE7DC1A49C76D893 /* PrivateKeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivateKeySecurityProvider.swift; sourceTree = "<group>"; };
+		94E90ABC11D81CCE4200E7BB5F47A68D /* SecurityContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityContext.swift; sourceTree = "<group>"; };
+		9AA1E3A0124CB441D3222D9F11EC5173 /* Encryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
+		A1C392350D29066853E0A764517AB530 /* SecurityCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SecurityCore.modulemap; sourceTree = "<group>"; };
+		AA506933B7B9E795873205EC7E603A19 /* SecurityKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityKey.swift; sourceTree = "<group>"; };
+		AC4E2B2965444DD10244ECD6356CA135 /* SecurityCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SecurityCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF32488DB4E5027548D55184604113DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AF600A66D225F4FE09C8FBBF2159C938 /* SecurityCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SecurityCore.h; path = SecurityCore/SecurityCore.h; sourceTree = "<group>"; };
-		B383F2791599D9FBC834B83BDBA4CB10 /* Encryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
-		BA4146145F3792222A8A3BF18D03D105 /* SecureStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
-		C41F86D34B22558E4D3F0F6A086EB73C /* SecPrivateKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecPrivateKey.swift; sourceTree = "<group>"; };
-		C57A11E1452BABC23ABA6975D5DC20AF /* KeySecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeySecurityProvider.swift; sourceTree = "<group>"; };
-		D042683ABE8C487427A38DA46922AC04 /* SecurityCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SecurityCore-Info.plist"; sourceTree = "<group>"; };
-		DC9E9590084C740D7812D3F165628889 /* SecurityCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SecurityCore.modulemap; sourceTree = "<group>"; };
-		E0A4A69A8E9A8B233F9E2A66F1B36B5C /* SecurityKey+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SecurityKey+Extension.swift"; sourceTree = "<group>"; };
-		EBF15CE523EE77B637315AE3C642AACE /* DataSecurityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataSecurityProvider.swift; sourceTree = "<group>"; };
-		F8D0D6620D2F24BB73AD7409BA9534A0 /* SecurityKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityKey.swift; sourceTree = "<group>"; };
+		B49383C648BBD590A65FC316AD16B0F4 /* SecuritySuiteKeysService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecuritySuiteKeysService.swift; sourceTree = "<group>"; };
+		BD4ADAFF6429BB955BC20AFC122B745E /* SecPrivateKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecPrivateKey.swift; sourceTree = "<group>"; };
+		C686343E8723B29DD1EC127185903506 /* SecurityKey+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SecurityKey+Extension.swift"; sourceTree = "<group>"; };
+		C90E774E8A626828C042035F468D91DD /* SecurityUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecurityUtils.swift; sourceTree = "<group>"; };
+		DBC3A4F462632B563C866543289B894D /* SecureStorageService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
+		E1B431D37C88B1C14E5900BC0BD6FCED /* SecurityCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SecurityCore-dummy.m"; sourceTree = "<group>"; };
+		F5FD884C4A2C076E7BB1F396AB1E8A9A /* SecPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SecPublicKey.swift; sourceTree = "<group>"; };
+		FC7924F060F14B415430A27CEA458005 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7F792FCB6D7F4E914AFE1DE97B261365 /* Frameworks */ = {
+		D9822FB1FDC2D9876F24A4D22B838D7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F209801875CEAC3151DB479728F708EF /* Foundation.framework in Frameworks */,
-				99968DC5C08D75C1CB95040515EDAF44 /* LocalAuthentication.framework in Frameworks */,
+				7F1B89195F31321FBBF21E123AD415CF /* Foundation.framework in Frameworks */,
+				89E5D0B73D10739F771904F081136CD0 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,59 +84,64 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E59E0946CC2551265A41F0517611E58 /* Sources */ = {
+		301EA28E3A8F5D4C3FAEA184FE7A01B5 /* Security Providers */ = {
 			isa = PBXGroup;
 			children = (
-				7A9DF7230FE0442E4CD8A3160D6AEC45 /* Dictionary+Extension.swift */,
-				B383F2791599D9FBC834B83BDBA4CB10 /* Encryptor.swift */,
-				C41F86D34B22558E4D3F0F6A086EB73C /* SecPrivateKey.swift */,
-				38DF16B797187A7FFA6A02E13AED73AD /* SecPublicKey.swift */,
-				BA4146145F3792222A8A3BF18D03D105 /* SecureStorageService.swift */,
-				0E6266D4C1918E0A62549F2A5ED839C7 /* SecurityContext.swift */,
-				1D7833619685E36FA73465CED049895D /* SecurityConvertible.swift */,
-				F8D0D6620D2F24BB73AD7409BA9534A0 /* SecurityKey.swift */,
-				E0A4A69A8E9A8B233F9E2A66F1B36B5C /* SecurityKey+Extension.swift */,
-				40F16742D064B30C1C92F628D27437DF /* SecurityUtils.swift */,
-				94223719394A7F1398A2BE3A6FCDF8C3 /* Security Providers */,
-			);
-			name = Sources;
-			path = SecurityCore/Sources;
-			sourceTree = "<group>";
-		};
-		94223719394A7F1398A2BE3A6FCDF8C3 /* Security Providers */ = {
-			isa = PBXGroup;
-			children = (
-				EBF15CE523EE77B637315AE3C642AACE /* DataSecurityProvider.swift */,
-				C57A11E1452BABC23ABA6975D5DC20AF /* KeySecurityProvider.swift */,
-				A60C8AC6C10C4AA1EE7DC1A49C76D893 /* PrivateKeySecurityProvider.swift */,
-				A1535776375344BD5097FDFAD321B140 /* PublicKeySecurityProvider.swift */,
-				5D06887B8171A7B50C10CEC2339FA261 /* SecurityProvider.swift */,
+				71A432E26E4199968ACFD2A4B00603DF /* DataSecurityProvider.swift */,
+				7C2543F3B61074C2DA6E8AA8823A0E13 /* KeySecurityProvider.swift */,
+				6083D97D3D860D1CAD20BF4514FF3A1F /* PrivateKeySecurityProvider.swift */,
+				20160B8272E285F23D7798411CA295C6 /* PublicKeySecurityProvider.swift */,
+				4C5FE1C255BCC11EBCF1FFD0974E689B /* SecurityProvider.swift */,
 			);
 			name = "Security Providers";
 			path = "Security Providers";
 			sourceTree = "<group>";
 		};
-		9F6EE4C2260264BC59C8AA9FB029BF0E /* Support Files */ = {
+		456E2B7814940D60A77CDE1B92DCAAAB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC9E9590084C740D7812D3F165628889 /* SecurityCore.modulemap */,
-				19F731B20DB970356960A2F72C8873CF /* SecurityCore.xcconfig */,
-				3825F6B3ECD30AE847DC8EC3F57ECFCE /* SecurityCore-dummy.m */,
-				D042683ABE8C487427A38DA46922AC04 /* SecurityCore-Info.plist */,
-				442ACD45D95FD08ADD184F659D4415B1 /* SecurityCore-prefix.pch */,
-				86E81E9812F2844E710B7F3ED63AD893 /* SecurityCore-umbrella.h */,
+				A1C392350D29066853E0A764517AB530 /* SecurityCore.modulemap */,
+				6EDE8EC8E72FD5E5F11B97A615DF7FB4 /* SecurityCore.xcconfig */,
+				E1B431D37C88B1C14E5900BC0BD6FCED /* SecurityCore-dummy.m */,
+				5399D0B8501E0DDF14403B297AB01BB5 /* SecurityCore-Info.plist */,
+				19EDBBC3A2177FD1A4547DA9537E2FA3 /* SecurityCore-prefix.pch */,
+				7D78B2DF0619AB580E888EF26ABAB05C /* SecurityCore-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Examples/Pods/Target Support Files/SecurityCore";
 			sourceTree = "<group>";
 		};
-		B2E04CB584DCE9A2E792CE6E55C5BDE9 /* Pod */ = {
+		5202381DD27521D344BFB453A1442FA4 /* SecurityCore */ = {
 			isa = PBXGroup;
 			children = (
-				1D67A33F05E941A4CC040A6E87B67389 /* LICENSE */,
-				6B28F57C76D1ABE36C2C2A8FD00433C0 /* SecurityCore.podspec */,
+				66302F8195CD927F75546D6B88D3ECEA /* SecurityCore.h */,
+				E9037E866674674BBF224FDBEC12EAF1 /* Pod */,
+				717CF47AD4690818494CB94AF5E85B96 /* Sources */,
+				456E2B7814940D60A77CDE1B92DCAAAB /* Support Files */,
 			);
-			name = Pod;
+			name = SecurityCore;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		717CF47AD4690818494CB94AF5E85B96 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				07D7B18266731A1BA257BC7212E9BEDE /* Dictionary+Extension.swift */,
+				9AA1E3A0124CB441D3222D9F11EC5173 /* Encryptor.swift */,
+				BD4ADAFF6429BB955BC20AFC122B745E /* SecPrivateKey.swift */,
+				F5FD884C4A2C076E7BB1F396AB1E8A9A /* SecPublicKey.swift */,
+				DBC3A4F462632B563C866543289B894D /* SecureStorageService.swift */,
+				94E90ABC11D81CCE4200E7BB5F47A68D /* SecurityContext.swift */,
+				2F5A1FB7744AE4A0CFE36AED75C1515A /* SecurityConvertible.swift */,
+				AA506933B7B9E795873205EC7E603A19 /* SecurityKey.swift */,
+				C686343E8723B29DD1EC127185903506 /* SecurityKey+Extension.swift */,
+				3628A10BAFF9E055031235ABA1F449AA /* SecuritySuite.swift */,
+				B49383C648BBD590A65FC316AD16B0F4 /* SecuritySuiteKeysService.swift */,
+				C90E774E8A626828C042035F468D91DD /* SecurityUtils.swift */,
+				301EA28E3A8F5D4C3FAEA184FE7A01B5 /* Security Providers */,
+			);
+			name = Sources;
+			path = SecurityCore/Sources;
 			sourceTree = "<group>";
 		};
 		C5A674EE0B782B64D7257F70A80E2367 /* Frameworks */ = {
@@ -148,20 +157,17 @@
 			children = (
 				C5A674EE0B782B64D7257F70A80E2367 /* Frameworks */,
 				04E15EBEAE3DE66510CB9B88518FDA21 /* Products */,
-				E53608CC6942132A145A5681A2F5DFD1 /* SecurityCore */,
+				5202381DD27521D344BFB453A1442FA4 /* SecurityCore */,
 			);
 			sourceTree = "<group>";
 		};
-		E53608CC6942132A145A5681A2F5DFD1 /* SecurityCore */ = {
+		E9037E866674674BBF224FDBEC12EAF1 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				AF600A66D225F4FE09C8FBBF2159C938 /* SecurityCore.h */,
-				B2E04CB584DCE9A2E792CE6E55C5BDE9 /* Pod */,
-				5E59E0946CC2551265A41F0517611E58 /* Sources */,
-				9F6EE4C2260264BC59C8AA9FB029BF0E /* Support Files */,
+				FC7924F060F14B415430A27CEA458005 /* LICENSE */,
+				AC4E2B2965444DD10244ECD6356CA135 /* SecurityCore.podspec */,
 			);
-			name = SecurityCore;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		FC01AD4A3F48BB14188721920B8DB927 /* iOS */ = {
@@ -176,12 +182,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08025BB8E8C6A577CA8C1063A53EE405 /* Headers */ = {
+		AA322683673134E6D1C4D767EA96EB0F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EFE0FBF036EE9BF1AD9CD23E9E1176D /* SecurityCore-umbrella.h in Headers */,
-				0C57C697C9DED4C9A6AC3A397DC3A146 /* SecurityCore.h in Headers */,
+				ADD9A2A16B0D4430EAB5DD6DA83FD6BC /* SecurityCore-umbrella.h in Headers */,
+				7017FDF8E556D865170596F61C21C89F /* SecurityCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,12 +196,12 @@
 /* Begin PBXNativeTarget section */
 		1B074D64A374C61B465588A3CE4CD2F3 /* SecurityCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E616AB7AAFB377A1A8F6ADF4035CE42 /* Build configuration list for PBXNativeTarget "SecurityCore" */;
+			buildConfigurationList = 2BACF671FEE3DA719C9AC8011125141F /* Build configuration list for PBXNativeTarget "SecurityCore" */;
 			buildPhases = (
-				08025BB8E8C6A577CA8C1063A53EE405 /* Headers */,
-				45DF9DD81E2299EC52D7693A74F89088 /* Sources */,
-				7F792FCB6D7F4E914AFE1DE97B261365 /* Frameworks */,
-				6F52BA0C604901896F2D0FC250A6C495 /* Resources */,
+				AA322683673134E6D1C4D767EA96EB0F /* Headers */,
+				03CA25F5BA9495BC58607FC2FDCBEA90 /* Sources */,
+				D9822FB1FDC2D9876F24A4D22B838D7F /* Frameworks */,
+				D437B805D668E74E91C206BDB9D98B47 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +227,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E3300EB1D1E622599E8ECA8C9369E556;
 			productRefGroup = 04E15EBEAE3DE66510CB9B88518FDA21 /* Products */;
@@ -233,7 +240,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6F52BA0C604901896F2D0FC250A6C495 /* Resources */ = {
+		D437B805D668E74E91C206BDB9D98B47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,32 +250,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		45DF9DD81E2299EC52D7693A74F89088 /* Sources */ = {
+		03CA25F5BA9495BC58607FC2FDCBEA90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AADF49443819FD56EE15D3D8167E8E8 /* DataSecurityProvider.swift in Sources */,
-				BE68DD4F26BBD0B7D670F2C136C0AC95 /* Dictionary+Extension.swift in Sources */,
-				7FCA05969D2C20779E0BBBEB681DCEC3 /* Encryptor.swift in Sources */,
-				796C31EA7096B5CD90E4CC630B010CB6 /* KeySecurityProvider.swift in Sources */,
-				72B1045467D2A9050B9D9CE41BC61B02 /* PrivateKeySecurityProvider.swift in Sources */,
-				386E1C2F20D6F6ADCB9619E243120E79 /* PublicKeySecurityProvider.swift in Sources */,
-				C3A32047AA59B286F79A09EF94EC4BD7 /* SecPrivateKey.swift in Sources */,
-				10C6EEA9ED5C4F6C43071D8393AD39EF /* SecPublicKey.swift in Sources */,
-				DF487EF56C90A0999E29E5A8B57B3641 /* SecureStorageService.swift in Sources */,
-				43CB56C1345B8CEC7F4DB5FA1B02BAB4 /* SecurityContext.swift in Sources */,
-				22E8B087541619AB5833C98C5AE66E74 /* SecurityConvertible.swift in Sources */,
-				361F1F49BB2507672AF8AFDB9B2FABF4 /* SecurityCore-dummy.m in Sources */,
-				2C194A48C5025C08AFCFA938E0BB933A /* SecurityKey+Extension.swift in Sources */,
-				2F01D9018813AA6AFB550F7EBD9B919A /* SecurityKey.swift in Sources */,
-				3B3623F1D2A91934088B2F8D2F95B71F /* SecurityProvider.swift in Sources */,
-				3E90779D1A82D94C035653D5FD12572B /* SecurityUtils.swift in Sources */,
+				1B276F8FAA5268AFD3A2F48C4568B108 /* DataSecurityProvider.swift in Sources */,
+				EBC6E89F3B1246D3B5A50995CD8A73ED /* Dictionary+Extension.swift in Sources */,
+				009208B621D3EE42CA50FE24B1B10A9C /* Encryptor.swift in Sources */,
+				9FE518AF8291AE53340560486E75EF5B /* KeySecurityProvider.swift in Sources */,
+				03F920443B08020BC8BD79E27512C652 /* PrivateKeySecurityProvider.swift in Sources */,
+				416B7C41082D671BAE10D666008153D8 /* PublicKeySecurityProvider.swift in Sources */,
+				6063C41EDD557750E0C971A04420769F /* SecPrivateKey.swift in Sources */,
+				1F4BA428C5BC92B3642FF0A1956E36ED /* SecPublicKey.swift in Sources */,
+				59DC96E5DDDD4BD2C05A1AD3B40D22AE /* SecureStorageService.swift in Sources */,
+				B694FFD1E7B16795273643B19674D357 /* SecurityContext.swift in Sources */,
+				44EFE339BF02164F4CC42A962AB275BD /* SecurityConvertible.swift in Sources */,
+				B4BE0AAC9678F0EA023889478EEFF76F /* SecurityCore-dummy.m in Sources */,
+				77AC488EDF1A117E8D25653CC3072083 /* SecurityKey+Extension.swift in Sources */,
+				C8B4B7574F874F3170B72142DE9A6AC7 /* SecurityKey.swift in Sources */,
+				BECEBEA6086C9F0B81A1834914275E6F /* SecurityProvider.swift in Sources */,
+				DFEE692421C8BCDF2188A3EAF21C786D /* SecuritySuite.swift in Sources */,
+				3B1688481A16FF23CF8965B9B9ACD038 /* SecuritySuiteKeysService.swift in Sources */,
+				C1D7A815EDA23565CBB8F0868849AA3B /* SecurityUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		06000AF213779EA92DD9D87113E2B46E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDE8EC8E72FD5E5F11B97A615DF7FB4 /* SecurityCore.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SecurityCore/SecurityCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SecurityCore/SecurityCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SecurityCore/SecurityCore.modulemap";
+				PRODUCT_MODULE_NAME = SecurityCore;
+				PRODUCT_NAME = SecurityCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4197743656C1EC1669EFFD402151481D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -329,9 +374,9 @@
 			};
 			name = Release;
 		};
-		74044F9485E5A0BAD48AE55C5792FBD1 /* Release */ = {
+		75CA2525D3C5F2552E6FEDBAB1EE5883 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19F731B20DB970356960A2F72C8873CF /* SecurityCore.xcconfig */;
+			baseConfigurationReference = 6EDE8EC8E72FD5E5F11B97A615DF7FB4 /* SecurityCore.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -365,42 +410,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		EF50C2CCF25D6850C3D83CAC3D5C91DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19F731B20DB970356960A2F72C8873CF /* SecurityCore.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SecurityCore/SecurityCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SecurityCore/SecurityCore-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SecurityCore/SecurityCore.modulemap";
-				PRODUCT_MODULE_NAME = SecurityCore;
-				PRODUCT_NAME = SecurityCore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		F16186190B9131BAE64A6F5D15A3A208 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -469,11 +478,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E616AB7AAFB377A1A8F6ADF4035CE42 /* Build configuration list for PBXNativeTarget "SecurityCore" */ = {
+		2BACF671FEE3DA719C9AC8011125141F /* Build configuration list for PBXNativeTarget "SecurityCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF50C2CCF25D6850C3D83CAC3D5C91DB /* Debug */,
-				74044F9485E5A0BAD48AE55C5792FBD1 /* Release */,
+				06000AF213779EA92DD9D87113E2B46E /* Debug */,
+				75CA2525D3C5F2552E6FEDBAB1EE5883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,7 +20,7 @@ public class SecPublicKey {
     
     public convenience init(privateKey: SecPrivateKey) throws {
         guard let publicKey = SecKeyCopyPublicKey(privateKey.secKey) else {
-            throw SecureStorageError.unableToCreatePublicKey
+            throw SecureStorageError.unableToCreateKey
         }
         self.init(publicKey)
     }

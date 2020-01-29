@@ -68,7 +68,7 @@ public extension SecurityKey where T == SecPrivateKey {
     }
 
     func generateKey(context: SecurityContext? = nil) throws -> T {
-        return try self.read(context: context)
+        return try self.generateKey()
     }
 }
 

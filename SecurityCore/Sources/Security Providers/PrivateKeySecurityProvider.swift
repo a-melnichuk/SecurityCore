@@ -10,6 +10,7 @@ import Foundation
 import LocalAuthentication
 
 public final class PrivateKeySecurityProvider: SecurityProvider {
+    
     public typealias T = SecPrivateKey
     
     public let tag: Data
@@ -65,11 +66,11 @@ public final class PrivateKeySecurityProvider: SecurityProvider {
             }
             return SecPrivateKey(item as! SecKey)
         } catch SecureStorageError.notFound where generateKeyIfNotFound {
-            return SecPrivateKey(try generateKey())
+            return try generateKey()
         }
     }
     
-    public func generateKey() throws -> SecKey {
+    public func generateKey() throws -> SecPrivateKey {
         let access = SecAccessControlCreateWithFlags(
             nil,
             secureStorageOptions.rawValue,
@@ -99,7 +100,7 @@ public final class PrivateKeySecurityProvider: SecurityProvider {
             #endif
             throw SecureStorageError.securityError(cfError as Error)
         }
-        return privateKey
+        return SecPrivateKey(privateKey)
     }
     
     public func delete(tag: Data) throws {
